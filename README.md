@@ -79,3 +79,12 @@ Bounded Type Parameters -> GET/PUT<br/>
 Copy and insert from one collection to another using both Upper and Lower Bounded Wildcards
 
 [Java Example]()
+
+### 1.7 Type Erasure and Bridge Methods
+`The compiler discards the type parameters on the class and replaces them with its first bound, or Object if the type parameter is unbound.`
+
+The final bytecode will contain plain java classes and objects!</br>
+Java uses Type Erasure to implement generics, it replaces all generics type parameters and wildcards with their bounds or Object for unbounded type parameters.<br/>
+Bridge Method is a synthetic method created by the Java compiler while compiling a class or interface that extends a parameterized class or implements a parameterized interface where method signatures may be slightly different or ambiguous.
+
+[Java Example]()
