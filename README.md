@@ -19,13 +19,13 @@ Why use generics ?<br/>
 
 `class HashTable<K, V>`
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.2%20Multiple%20Generics)
 
 ### 1.3 Methods
 
 `public <T, V> boolean checkEquality(T t, V v)`
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.3%20Methods)
 
 ### 1.4 Bounded Type Parameters
 
@@ -35,7 +35,7 @@ Why use generics ?<br/>
 * Restrict the types that can be used as type parameters, like accept only numbers (integers, float, double).<br/>
 * Allows to invoke methods in defined in the bound.
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.4%20Bounded%20Type%20Parameters)
 
 ### 1.5 Type Inference
 
@@ -44,12 +44,11 @@ Why use generics ?<br/>
 * In the example above, the compiler determined the type as Serializable since both String and ArrayList implement it.<br/>
 * It's the ability of the compiler to determine the type of argument(s) and the type of the returned value.
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.5%20Type%20Inference)
 
 ### 1.6 Wildcards
 
 #### 1.6.1 Unbounded Wildcards
-
 `List<?> – represents a list of any type - A list of unknown type`
 
 Usefull if:<br/>
@@ -57,20 +56,18 @@ Usefull if:<br/>
 * Code is using methods in the generic class that don't depend on the type parameter.<br/>
 * Class<?> is so often used because most of the methods in Class<T> do not depend on T.<br/>
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.6%20Wildcards/1.6.1%20Unbounded%20Wildcards)
 
 #### 1.6.2 Upper Bounded Wildcards
-
 `List<? extends Number> – represents a list of Number or its subtypes (for instance, Double or Integer)`
 
 * An Integer cannot be added to the list because the type can not be guaranteed - it may be a List<Double> since it's a subtype of Number also.<br/>
 * Upper Bounded Wildcards are used to read items.<br/>
 * Does not provide immutability.<br/>
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.6%20Wildcards/1.6.2%20Upper%20Bounded%20Wildcards)
 
 #### 1.6.3 Lower Bounded Wildcards
-
 `List<? super T>`
 
 * Used to insert items into a generic data structure or collection.<br/>
@@ -80,13 +77,13 @@ Usefull if:<br/>
 2. Lower Bounded (super) -> PUT<br/>
 3. Bounded Type Parameters -> GET/PUT<br/>
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.6%20Wildcards/1.6.3%20Lower%20Bounded%20Wildcards)
 
 #### 1.6.4 Wildcards Exercise
 
 * Copy and insert from one collection to another using both Upper and Lower Bounded Wildcards
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.6%20Wildcards/1.6.4%20Exercise)
 
 ### 1.7 Type Erasure and Bridge Methods
 `The compiler discards the type parameters on the class and replaces them with its first bound, or Object if the type parameter is unbound.`
@@ -95,7 +92,7 @@ Usefull if:<br/>
 * Java uses Type Erasure to implement generics, it replaces all generics type parameters and wildcards with their bounds or Object for unbounded type parameters.<br/>
 * Bridge Method is a synthetic method created by the Java compiler while compiling a class or interface that extends a parameterized class or implements a parameterized interface where method signatures may be slightly different or ambiguous.
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/1.%20Generics/1.7%20Type%20Erasure%20and%20Bridge%20Methods)
 
 ## 2. Data Structures
 
@@ -217,14 +214,14 @@ ArrayList vs LinkedList:
 * Element with high priority is served first.</br>
 * Elements are ordered according to their natural ordering defined by the Comparable interface.</br>
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.2%20Queues/2.2.1%20PriorityQueue)
 
 #### 2.2.2 ArrayDeque
 `double ended queue (DEQUE)`
 
 * Huge one dimensional arrays, can manipulate both first and last item with O(1) performance.
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.2%20Queues/2.2.2%20ArrayDeque)
 
 ArrayDeque vs Stack:</br>
 * because Stack is synchronized (it extends the Vector class), it is going to be slower than the ArrayDeque solution. So it is advisable to use ArrayDeque if we are after a LIFO structure.
@@ -235,7 +232,7 @@ ArrayDeque vs Stack:</br>
 * Also known as associative arrays or dictionaries.</br>
 * Collection of key-value pairs.</br>
 
-#### 2.3.1 Hashtables
+#### 2.3.1 HashTables
 `Map<Integer, String> map = new HashMap<>();`
 
 * Map uses the hashCode function to calculate an index for the item (the key).</br>
@@ -255,7 +252,7 @@ Principles:</br>
 4. Iterate over keys and values at the same time:</br>
 `for ( Map.Entry<Integer,String> entry : map.entrySet() ) System.out.println( entry.getKey() + ":" + entry.getValue() );`</br>
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.3%20Maps/2.3.1%20Hashtables)
 
 #### 2.3.2 LinkedHashMap
 `Map<Integer, String> map = new LinkedHashMap<>();`
@@ -271,7 +268,7 @@ Principles:</br>
 * The map is sorted according to the natural ordering of its keys, or by a Comparator provided at map creation time.</br>
 * This implementation provides guaranteed log(n) time cost for the containsKey, get, put and remove operations.</br>
 
-[Java Example]()
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.3%20Maps/2.3.3%20TreeMap)
 
 #### 2.3.3 HashMap
 `Map<Integer, String> map = new HashMap<>();`
@@ -291,17 +288,23 @@ Principles:</br>
 4. containsAll: checks if it contains all values of the second Set.</br>
 `System.out.println(set.containsAll(set2));`</br>
 
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.4%20Sets/2.4.1%20HashSet)
+
 #### 2.4.2 LinkedHashSet
 `Set<String> set = new LinkedHashSet<>();`
 
 * Balanced binary tree based data structure.</br>
 * Mantains the insertion order.</br>
 
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.4%20Sets/2.4.2%20LinkedHashSet)
+
 #### 2.4.3 TreeSet
 `Set<String> set = new TreeSet<>();`
 
 * Red Black Tree based data structure.</br>
 * Allows Sorting.</br>
+
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.4%20Sets/2.4.3%20TreeSet)
 
 ### 2.5 Sorting Collections
 
@@ -333,6 +336,8 @@ Principles:</br>
 `Collections.sort(bookList, Comparator.comparing(Person::getName));` Sorting by Name</br>
 `Collections.sort(bookList, Comparator.comparing(Person::getAge).reversed());` Sorting by Age</br>
 `Collections.sort(bookList, Comparator.comparing(Person::getName).thenComparing(Person::getAge).reversed());` Sorting by Name first, then Age descending (if Names are equal)</br>
+
+[Java Example](https://github.com/jackanakin/generics/tree/main/2.%20Data%20Structures/2.5%20Sorting%20Collections/2.5.2%20Sorting%20Collections)
 
 #### 2.6.2 Collections Class
 
