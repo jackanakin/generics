@@ -1,6 +1,5 @@
 # Generics, Reflection & Collections in Java
-
-`https://www.udemy.com/course/introduction-to-generics-in-java/`
+> https://www.udemy.com/course/introduction-to-generics-in-java
 
 [Oracle](https://docs.oracle.com/javase/tutorial/java/generics/index.html)
 
